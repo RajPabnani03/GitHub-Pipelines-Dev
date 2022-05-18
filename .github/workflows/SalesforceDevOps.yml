@@ -1,0 +1,37 @@
+- name: OrgFlow: Salesforce DevOps for GitHub
+  # You may pin to the exact commit or the version.
+  # uses: OrgFlow-Actions/setup@96a8b8ec4d5f8acf3f53d21c67c43a63528dfdab
+  uses: OrgFlow-Actions/setup@v1.0.2
+  with:
+    # Version of OrgFlow to install. Can be specified as major '1', minor '1.1' or patch '1.1.1'; latest matching version will be installed (omit to install latest available version).
+    version: # optional
+    # Set to 'true' to include prerelease versions when determining latest available version.
+    include-prerelease: # optional, default is false
+    # Don't download and install OrgFlow (i.e. assume OrgFlow is already installed).
+    skip-install: # optional, default is false
+    # Your OrgFlow license key (you can get one at https://www.orgflow.io/trial if you do not already have one).
+    license-key: 
+    # Save username for connecting to production Salesforce org (stored on runner in encrypted form).
+    salesforce-username: # optional
+    # Save password for connecting to production Salesforce org (stored on runner in encrypted form).
+    salesforce-password: # optional
+    # Save username for connecting to remote Git repository (not needed if connecting to a GitHub repository).
+    git-username: # optional
+    # Save access token or password for connecting to remote Git repository (use 'secrets.GITHUB_TOKEN' if connecting to the current repository).
+    git-password: # optional
+    # Set name to use in committer signature when committing changes to Git repository.
+    git-committer-name: # optional, default is OrgFlow Default Committer
+    # Set email address to use in committer signature when committing changes to Git repository.
+    git-committer-email: # optional, default is defaultcommitter@orgflow.io
+    # Name of OrgFlow stack to save credentials for (required when saving Salesforce or Git credentials).
+    stack-name: # optional
+    # Encryption key to use when encrypting and decrypting Salesforce and/or Git credentials (omit to generate a new encryption key).
+    encryption-key: # optional
+    # Name (optionally tokenized) of OrgFlow diagnostic log files.
+    log-file-name: # optional, default is {C}-{T:yyyyMMdd-HHmmss-FFF}.log
+    # Verbosity level for OrgFlow diagnostic log files (verbose, debug, information, warning, error or fatal).
+    log-level: # optional, default is verbose
+    # Set to 'false' to disable uploading of all OrgFlow diagnostic log files and bundles during post-job processing.
+    upload-diag-artifact: # optional, default is true
+    # Name to use for the artifact when uploading OrgFlow diagnostic log files and bundles.
+    diag-artifact-name: # optional, default is orgflow_diag_${{ github.job }}_${{ github.run_attempt }}
