@@ -1,0 +1,4 @@
+name: PMD - Salesforce APEX code analyzer action
+  # You may pin to the exact commit or the version.
+  # uses: legetz/setup-pmd@7bbe849cea847c3820eceac2830bf4efb8f24e47
+  uses: legetz/setup-pmd@v6.44
